@@ -1,0 +1,27 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    key_1: "value_1"
+    key_2: "value_2"
+            
+phases:
+  install:
+    commands:
+      - bash scripts/01_install.sh
+  pre_build:
+    commands:
+      - bash scripts/02_pre_build.sh
+  build:
+    commands:
+      - bash scripts/03_build.sh
+  post_build:
+    commands:
+      - bash scripts/04_post_build.sh
+
+#artifacts:
+#  files:
+#    - location
+#    - location
+#  discard-paths: yes
+#  base-directory: location
